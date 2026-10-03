@@ -4,6 +4,10 @@ public class Filler
 {
     public static async Task FillTable(int numberOfContacts, PhonebookContext context)
     {
+        if (context.Contacts.Any())
+        {
+            return;
+        }
         var random = new Random();
         string[] names = new string[]
         {

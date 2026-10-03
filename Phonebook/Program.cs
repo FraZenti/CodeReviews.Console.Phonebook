@@ -12,6 +12,6 @@ string appPassword = config.GetSection("EmailSettings")["AppPassword"]!;
 
 var context = new PhonebookContext(connectionString);
 
-//await Filler.FillTable(50, context);
+await Filler.FillTable(50, context);
 
 await Menu.ShowMenu(context, senderEmail, appPassword);

@@ -96,6 +96,10 @@ internal static class DataCollector
     {
         AnsiConsole.MarkupLine("[blue]List of Contacts: [/]");
         ShowTable(context.Contacts.ToList());
+
+        Console.WriteLine("Press any key to return to the menu...\n");
+
+        Console.ReadKey();
     }
 
     internal static async Task<Contact?> SearchContact(PhonebookContext context)
